@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Tech Nova</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <img src="https://imgs.search.brave.com/oSoAvhr6kW8P0l0hTyUjiMShNyhOIOER0XLn-wjW6AI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zZG4u/c2lnbmFsaGlyZS5j/by9zdG9yYWdlL2Nv/bXBhbnkvYjVlYi84/MWI2L2NkYWIvYzZi/NC85YTViLzkzZjIv/M2U5My81MDIzLndl/YnA" alt="rest" width="100px" height="50px" >
+    <a class="navbar-brand" href="#">technova solutions</a> <i class="fa-brands fa-bots"></i>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">about</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="classes.html">classes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true"></a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+  <!-- Main Login Form Section -->
+  <main class="container my-5 flex-grow-1">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-md-7">
+        
+        <!-- Login Card -->
+        <div class="card border-0 shadow-lg rounded-4 overflow-hidden bg-white">
+          <div class="bg-dark text-white p-4 text-center border-bottom border-primary border-3">
+            <span class="badge bg-primary bg-opacity-25 text-primary px-3 py-2 rounded-pill fw-semibold text-uppercase mb-2">
+              Welcome Back
+            </span>
+            <h2 class="fw-bold text-uppercase text-primary mb-1">Account Login</h2>
+            <p class="small text-light mb-0">Sign in to access your dashboard and active classes.</p>
+          </div>
+          
+          <div class="card-body p-4 p-md-5">
+            <form>
+              <!-- Email Address -->
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label fw-semibold text-dark small">Email Address</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-light text-secondary border-end-0"><i class="bi bi-envelope-fill"></i></span>
+                  <input type="email" class="form-control border-start-0 bg-light" id="loginEmail" placeholder="name@example.com" required>
+                </div>
+              </div>
+
+              <!-- Password -->
+              <div class="mb-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <label for="loginPassword" class="form-label fw-semibold text-dark small mb-1">Password</label>
+                  <a href="#" class="text-primary text-decoration-none small fw-semibold">Forgot password?</a>
+                </div>
+                <div class="input-group">
+                  <span class="input-group-text bg-light text-secondary border-end-0"><i class="bi bi-lock-fill"></i></span>
+                  <input type="password" class="form-control border-start-0 bg-light" id="loginPassword" placeholder="Enter your password" required>
+                </div>
+              </div>
+
+              <!-- Remember Me Checkbox -->
+              <div class="mb-4 form-check">
+                <input type="checkbox" class="form-check-input" id="rememberCheck">
+                <label class="form-check-label small text-secondary" for="rememberCheck">
+                  Remember me on this device
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill shadow-sm fw-semibold mb-3">
+                Sign In <i class="bi bi-box-arrow-in-right ms-2"></i>
+              </button>
+
+              <!-- Social Login Divider -->
+              <div class="text-center position-relative my-4">
+                <hr class="border-secondary opacity-25">
+                <span class="position-absolute top-50 start-50 translate-middle bg-white px-3 text-muted small">OR</span>
+              </div>
+
+              <!-- Social Sign In Buttons -->
+              <div class="d-flex gap-2 mb-3">
+                <button type="button" class="btn btn-outline-secondary w-50 rounded-pill small fw-semibold">
+                  <i class="bi bi-google me-2 text-danger"></i> Google
+                </button>
+                <button type="button" class="btn btn-outline-secondary w-50 rounded-pill small fw-semibold">
+                  <i class="bi bi-github me-2 text-dark"></i> GitHub
+                </button>
+              </div>
+
+              <!-- Register Redirection Link -->
+              <div class="text-center mt-4">
+                <p class="small text-secondary mb-0">
+                  Don't have an account yet? <a href="register.html" class="text-primary fw-bold text-decoration-none">Register here</a>
+                </p>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-4 mt-auto">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-uppercase text-primary mb-3">
+            <i class="bi bi-rocket-takeoff-fill me-2"></i>Tech Nova
+          </h5>
+          <p class="text-white-50 small mb-4" style="line-height: 1.6;">
+            Your ultimate launchpad for personal and professional growth. We empower aspiring tech professionals with practical, industry-ready skills and expert mentorship.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 ms-auto">
+          <h6 class="fw-bold text-uppercase text-primary mb-3">Programs</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Web Development</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Data Science</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">UI/UX Design</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Cloud Computing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold text-uppercase text-primary mb-3">Company</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none small">About Us</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Testimonials</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Mentors</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-uppercase text-primary mb-3">Stay Updated</h6>
+          <p class="text-white-50 small mb-3">Subscribe to our newsletter for the latest tech news and course updates.</p>
+          <form>
+            <div class="input-group mb-2">
+              <input type="email" class="form-control form-control-sm bg-secondary bg-opacity-25 border-secondary text-white" placeholder="Enter your email">
+              <button class="btn btn-primary btn-sm px-3" type="button"><i class="bi bi-send-fill"></i></button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <hr class="border-secondary opacity-25 my-4">
+
+      <div class="row align-items-center small text-white-50">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          &copy; 2026 Tech Nova. All rights reserved.
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
+          <a href="#" class="text-white-50 text-decoration-none me-3">Terms of Service</a>
+          <a href="#" class="text-white-50 text-decoration-none">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

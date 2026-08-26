@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classes & Courses - Tech Nova</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+
+  <!-- Navigation Bar (With 'Classes' active) -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <img src="https://imgs.search.brave.com/oSoAvhr6kW8P0l0hTyUjiMShNyhOIOER0XLn-wjW6AI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zZG4u/c2lnbmFsaGlyZS5j/by9zdG9yYWdlL2Nv/bXBhbnkvYjVlYi84/MWI2L2NkYWIvYzZi/NC85YTViLzkzZjIv/M2U5My81MDIzLndl/YnA" alt="rest" width="100px" height="50px" >
+    <a class="navbar-brand" href="#">technova solutions</a> <i class="fa-brands fa-bots"></i>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">about</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="classes.html">classes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true"></a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+  <!-- Header Section -->
+  <section class="bg-dark text-white text-center py-5 border-bottom border-primary">
+    <div class="container py-3">
+      <span class="badge bg-primary bg-opacity-25 text-primary px-3 py-2 rounded-pill fw-semibold text-uppercase mb-2">
+        Learn Practical Skills
+      </span>
+      <h1 class="display-5 fw-bold text-uppercase text-primary mb-3">Explore Our Classes</h1>
+      <p class="fs-6 text-light col-lg-6 mx-auto mb-0">
+        Hands-on tech programs designed to take you from beginner to job-ready with expert mentorship.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Classes Container -->
+  <main class="container my-5">
+
+    <!-- Category Filter Pills -->
+    <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
+      <button class="btn btn-primary rounded-pill px-4 fw-semibold">All Classes</button>
+      <button class="btn btn-outline-secondary rounded-pill px-4 fw-semibold">Web Dev</button>
+      <button class="btn btn-outline-secondary rounded-pill px-4 fw-semibold">Data Science</button>
+      <button class="btn btn-outline-secondary rounded-pill px-4 fw-semibold">UI/UX Design</button>
+      <button class="btn btn-outline-secondary rounded-pill px-4 fw-semibold">Cloud</button>
+    </div>
+
+    <!-- Course Grid -->
+    <div class="row g-4">
+
+      <!-- Course 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=500&auto=format&fit=crop" class="card-img-top" alt="Web Development" style="height: 200px; object-fit: cover;">
+            <span class="badge bg-primary position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">Beginner</span>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between text-muted small mb-2">
+              <span><i class="bi bi-clock me-1 text-primary"></i> 12 Weeks</span>
+              <span><i class="bi bi-person-fill me-1 text-primary"></i> Live Online</span>
+            </div>
+            <h5 class="card-title fw-bold text-dark mb-2">Full-Stack Web Development</h5>
+            <p class="card-text text-secondary small mb-4 flex-grow-1">
+              Master HTML, CSS, JavaScript, React, and Node.js. Build full-stack applications from scratch.
+            </p>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+              <span class="fs-5 fw-bold text-primary">$299</span>
+              <button class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-semibold">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop" class="card-img-top" alt="Data Analytics" style="height: 200px; object-fit: cover;">
+            <span class="badge bg-primary position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">Intermediate</span>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between text-muted small mb-2">
+              <span><i class="bi bi-clock me-1 text-primary"></i> 10 Weeks</span>
+              <span><i class="bi bi-person-fill me-1 text-primary"></i> Hybrid</span>
+            </div>
+            <h5 class="card-title fw-bold text-dark mb-2">Data Science & Python</h5>
+            <p class="card-text text-secondary small mb-4 flex-grow-1">
+              Learn data visualization, SQL databases, pandas, and machine learning fundamentals using Python.
+            </p>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+              <span class="fs-5 fw-bold text-primary">$349</span>
+              <button class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-semibold">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&auto=format&fit=crop" class="card-img-top" alt="UI/UX Design" style="height: 200px; object-fit: cover;">
+            <span class="badge bg-primary position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">All Levels</span>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between text-muted small mb-2">
+              <span><i class="bi bi-clock me-1 text-primary"></i> 8 Weeks</span>
+              <span><i class="bi bi-person-fill me-1 text-primary"></i> Self-Paced</span>
+            </div>
+            <h5 class="card-title fw-bold text-dark mb-2">UI/UX Design Essentials</h5>
+            <p class="card-text text-secondary small mb-4 flex-grow-1">
+              Design beautiful user interfaces and wireframes in Figma. Understand wireframing and prototyping.
+            </p>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+              <span class="fs-5 fw-bold text-primary">$249</span>
+              <button class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-semibold">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 4 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&auto=format&fit=crop" class="card-img-top" alt="Cloud Computing" style="height: 200px; object-fit: cover;">
+            <span class="badge bg-primary position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">Advanced</span>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between text-muted small mb-2">
+              <span><i class="bi bi-clock me-1 text-primary"></i> 8 Weeks</span>
+              <span><i class="bi bi-person-fill me-1 text-primary"></i> Live Online</span>
+            </div>
+            <h5 class="card-title fw-bold text-dark mb-2">Cloud Computing & AWS</h5>
+            <p class="card-text text-secondary small mb-4 flex-grow-1">
+              Learn Amazon Web Services (AWS), server deployment, Docker, and DevOps cloud infrastructure.
+            </p>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+              <span class="fs-5 fw-bold text-primary">$399</span>
+              <button class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-semibold">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 5 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&auto=format&fit=crop" class="card-img-top" alt="Cybersecurity" style="height: 200px; object-fit: cover;">
+            <span class="badge bg-primary position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">Beginner</span>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between text-muted small mb-2">
+              <span><i class="bi bi-clock me-1 text-primary"></i> 10 Weeks</span>
+              <span><i class="bi bi-person-fill me-1 text-primary"></i> Live Online</span>
+            </div>
+            <h5 class="card-title fw-bold text-dark mb-2">Cybersecurity Fundamentals</h5>
+            <p class="card-text text-secondary small mb-4 flex-grow-1">
+              Understand network security, ethical hacking tools, encryption, and threat analysis basics.
+            </p>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+              <span class="fs-5 fw-bold text-primary">$299</span>
+              <button class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-semibold">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 6 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&auto=format&fit=crop" class="card-img-top" alt="Mobile App Dev" style="height: 200px; object-fit: cover;">
+            <span class="badge bg-primary position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">Intermediate</span>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between text-muted small mb-2">
+              <span><i class="bi bi-clock me-1 text-primary"></i> 12 Weeks</span>
+              <span><i class="bi bi-person-fill me-1 text-primary"></i> Self-Paced</span>
+            </div>
+            <h5 class="card-title fw-bold text-dark mb-2">Mobile App Dev (React Native)</h5>
+            <p class="card-text text-secondary small mb-4 flex-grow-1">
+              Build cross-platform iOS and Android mobile apps using JavaScript and React Native.
+            </p>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+              <span class="fs-5 fw-bold text-primary">$329</span>
+              <button class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-semibold">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-uppercase text-primary mb-3">
+            <i class="bi bi-rocket-takeoff-fill me-2"></i>Tech Nova
+          </h5>
+          <p class="text-white-50 small mb-4" style="line-height: 1.6;">
+            Your ultimate launchpad for personal and professional growth. We empower aspiring tech professionals with practical, industry-ready skills and expert mentorship.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 ms-auto">
+          <h6 class="fw-bold text-uppercase text-primary mb-3">Programs</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Web Development</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Data Science</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">UI/UX Design</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Cloud Computing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold text-uppercase text-primary mb-3">Company</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none small">About Us</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Testimonials</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Mentors</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-uppercase text-primary mb-3">Stay Updated</h6>
+          <p class="text-white-50 small mb-3">Subscribe to our newsletter for the latest tech news and course updates.</p>
+          <form>
+            <div class="input-group mb-2">
+              <input type="email" class="form-control form-control-sm bg-secondary bg-opacity-25 border-secondary text-white" placeholder="Enter your email">
+              <button class="btn btn-primary btn-sm px-3" type="button"><i class="bi bi-send-fill"></i></button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <hr class="border-secondary opacity-25 my-4">
+
+      <div class="row align-items-center small text-white-50">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          &copy; 2026 Tech Nova. All rights reserved.
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
+          <a href="#" class="text-white-50 text-decoration-none me-3">Terms of Service</a>
+          <a href="#" class="text-white-50 text-decoration-none">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
