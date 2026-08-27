@@ -4,15 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>project 1</title>
-</head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Custom Black & Gold Modern Styles */
+  :root {
+    --gold: #d4af37;
+    --gold-hover: #b89628;
+    --black: #0d0d0d;
+    --dark-surface: #181818;
+  }
+  body {
+    background-color: var(--black);
+    color: #e0e0e0;
+  }
+  .text-gold { color: var(--gold) !important; }
+  .bg-gold { background-color: var(--gold) !important; color: #000 !important; }
+  
+  /* Navbar Overrides */
+  .navbar-black {
+    background-color: var(--dark-surface) !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  }
+  .navbar-black .nav-link { color: #cccccc !important; }
+  .navbar-black .nav-link:hover, .navbar-black .nav-link.active { color: var(--gold) !important; }
+  .navbar-black .navbar-brand { color: var(--gold) !important; font-weight: bold; }
+  
+  /* Buttons */
+  .btn-gold {
+    background-color: var(--gold);
+    color: #000;
+    border: 1px solid var(--gold);
+  }
+  .btn-gold:hover {
+    background-color: var(--gold-hover);
+    color: #000;
+    border-color: var(--gold-hover);
+  }
+  .btn-outline-gold {
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+  .btn-outline-gold:hover {
+    background-color: var(--gold);
+    color: #000;
+  }
+
+  /* Cards & Borders */
+  .card-dark-gold {
+    background-color: var(--dark-surface) !important;
+    border: 1px solid rgba(212, 175, 55, 0.25) !important;
+    color: #ffffff;
+  }
+  .card-dark-gold:hover {
+    border-color: var(--gold) !important;
+  }
+  .hover-gold:hover { color: var(--gold) !important; }
+</style>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-black navbar-dark">
   <div class="container-fluid">
-    <img src="https://imgs.search.brave.com/oSoAvhr6kW8P0l0hTyUjiMShNyhOIOER0XLn-wjW6AI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zZG4u/c2lnbmFsaGlyZS5j/by9zdG9yYWdlL2Nv/bXBhbnkvYjVlYi84/MWI2L2NkYWIvYzZi/NC85YTViLzkzZjIv/M2U5My81MDIzLndl/YnA" alt="rest" width="100px" height="50px" >
-    <a class="navbar-brand" href="#">technova solutions</a> <i class="fa-brands fa-bots"></i>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <img src="https://imgs.search.brave.com/oSoAvhr6kW8P0l0hTyUjiMShNyhOIOER0XLn-wjW6AI/rs:fit:500:0:1:0/g:ce/aHR0cH0Ly9zZG4u/c2lnbmFsaGlyZS5j/by9zdG9yYWdlL2Nv/bXBhbnkvYjVlYi84/MWI2L2NkYWIvYzZi/NC85YTViLzkzZjIv/M2U5My81MDIzLndl/YnA" alt="rest" width="100px" height="50px" style="border-radius: 4px; filter: brightness(0.9);">
+    <a class="navbar-brand ms-2" href="#">technova solutions</a> <i class="fa-brands fa-bots text-gold ms-1"></i>
+    <button class="navbar-toggler border-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -39,11 +95,11 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             services
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <ul class="dropdown-menu dropdown-menu-dark border-warning">
+            <li><a class="dropdown-item hover-gold" href="#">Action</a></li>
+            <li><a class="dropdown-item hover-gold" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider border-warning"></li>
+            <li><a class="dropdown-item hover-gold" href="#">Something else here</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -51,39 +107,37 @@
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-2 bg-dark text-white border-warning placeholder-glow" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-gold" type="submit">Search</button>
       </form>
     </div>
   </div>
 </nav>
  <div class="card border-0 text-white text-center overflow-hidden">
-  
-  
+
   <img 
     src="https://imgs.search.brave.com/R1_6R5SCsL3CQjnZ1P8j-K_PAR7NHR5QTBiqtCxlWUk/rs:fit:500:0:1:0/g:ce/aHR0cDovL2tld21h/bmFnZW1lbnQuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIw/LzA3L3dvcmtwbGFj/ZS0xLmpwZw" 
     class="card-img" 
     alt="Workplace Background" 
-    style="min-height: 450px; object-fit: cover;"
+    style="min-height: 450px; object-fit: cover; filter: brightness(0.4);"
   >
 
-  <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center bg-dark bg-opacity-60 p-4">
-    
-    <h1 class="display-4 fw-bold mb-3">
+  <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center bg-black bg-opacity-75 p-4">
+
+    <h1 class="display-4 fw-bold mb-3 text-gold">
       Build Your Future With Technology
     </h1>
-    
-    <h2 class="fs-5 fw-normal text-white-50 mb-4" style="max-width: 750px;">
+
+    <h2 class="fs-5 fw-normal text-light mb-4" style="max-width: 750px; color: #d0d0d0 !important;">
       Learn industry-ready skills and get professional technology solutions for your business.
     </h2>
-    
-    
+
     <div class="d-inline-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center">
-      <button class="btn btn-primary btn-lg px-4 py-2 rounded-pill shadow-sm fw-semibold">
+      <button class="btn btn-gold btn-lg px-4 py-2 rounded-pill shadow-sm fw-semibold">
         Explore Courses
       </button>
-      
-      <button class="btn btn-outline-light btn-lg px-4 py-2 rounded-pill shadow-sm fw-semibold">
+
+      <button class="btn btn-outline-gold btn-lg px-4 py-2 rounded-pill shadow-sm fw-semibold">
         Our Services
       </button>
     </div>
@@ -92,10 +146,10 @@
 
 </div>
 
-<div class="container text-center">
-  
+<div class="container text-center py-4" style="background: var(--dark-surface); border-top: 1px solid rgba(212, 175, 55, 0.2); border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
+
   <!-- Row 1 -->
-  <div class="row mb-3">
+  <div class="row mb-2 fw-semibold text-uppercase tracking-wide" style="color: #aaa; font-size: 0.9rem;">
     <div class="col">
       Students Trained
     </div>
@@ -111,7 +165,7 @@
   </div>
 
   <!-- Row 2 -->
-  <div class="row">
+  <div class="row display-6 fw-bold text-gold">
     <div class="col">
       2500+
     </div>
@@ -131,75 +185,75 @@
 <div class="container py-5">
   <!-- Modern responsive grid with gap spacing -->
   <div class="row g-4 justify-content-center">
-    
+
     <!-- Card 1 -->
     <div class="col-12 col-md-6 col-lg-4">
-      <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-        <img src="https://imgs.search.brave.com/UWIBwyMoG5QfMiysuHhGIhuo0a4lxhzsagZs9U-ihDc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L2ZyZWUtdmVjdG9y/L2NvbG9yZWQtaXNv/bWV0cmljLXByb2dy/YW1tZXJzLWNvbXBv/c2l0aW9uLXdpdGgt/c29mdHdhcmUtZGV2/ZWxvcG1lbnQtZGVz/Y3JpcHRpb24tbWFu/LXNpdC13b3JrXzEy/ODQtMjkwNDUuanBn/P3NlbXQ9YWlzX2h5/YnJpZCZ3PTc0MCZx/PTgw" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Web Development">
+      <div class="card h-100 card-dark-gold rounded-4 overflow-hidden">
+        <img src="https://imgs.search.brave.com/UWIBwyMoG5QfMiysuHhGIhuo0a4lxhzsagZs9U-ihDc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L2ZyZWUtdmVjdG9y/L2NvbG9yZWQtaXNv/bWV0cmljLXByb2dy/YW1tZXJzLWNvbXBv/c2l0aW9uLXdpdGgt/c29mdHdhcmUtZGV2/ZWxvcG1lbnQtZGVz/Y3JpcHRpb24tbWFu/XNpdC13b3JrXzEy/ODQtMjkwNDUuanBn/P3NlbXQ9YWlzX2h5/YnJpZCZ3PTc0MCZx/PTgw" class="card-img-top" style="height: 200px; object-fit: cover; filter: brightness(0.85);" alt="Web Development">
         <div class="card-body d-flex flex-column text-center p-4">
-          <h5 class="card-title fw-bold mb-2">Web Development</h5>
-          <p class="card-text text-secondary mb-4">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-          <a href="#" class="btn btn-primary mt-auto rounded-pill px-4">Go somewhere</a>
+          <h5 class="card-title fw-bold text-gold mb-2">Web Development</h5>
+          <p class="card-text text-light opacity-75 mb-4">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+          <a href="#" class="btn btn-gold mt-auto rounded-pill px-4">Go somewhere</a>
         </div>
       </div>
     </div>
 
     <!-- Card 2 -->
     <div class="col-12 col-md-6 col-lg-4">
-      <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-        <img src="https://imgs.search.brave.com/tWTDW2lgUd_YEfP6hPiw_t_yKcoHegGAOZhEHzH8YTM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzIwLzA3LzUxLzky/LzM2MF9GXzIwMDc1/MTkyODlfYVFtRUJV/VlQwR1kxV2NSQ3Ax/Rmk5OG9OaVdtZ3ZN/ZTUuanBn" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Mobile App Development">
+      <div class="card h-100 card-dark-gold rounded-4 overflow-hidden">
+        <img src="https://imgs.search.brave.com/tWTDW2lgUd_YEfP6hPiw_t_yKcoHegGAOZhEHzH8YTM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzIwLzA3LzUxLzky/LzM2MF9GXzIwMDc1/MTkyODlfYVFtRUJV/VlQwR1kxV2NSQ3Ax/Rmk5OG9OaVdtZ3ZN/ZTUuanBn" class="card-img-top" style="height: 200px; object-fit: cover; filter: brightness(0.85);" alt="Mobile App Development">
         <div class="card-body d-flex flex-column text-center p-4">
-          <h5 class="card-title fw-bold mb-2">Mobile App Development</h5>
-          <p class="card-text text-secondary mb-4">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-          <a href="#" class="btn btn-primary mt-auto rounded-pill px-4">Go somewhere</a>
+          <h5 class="card-title fw-bold text-gold mb-2">Mobile App Development</h5>
+          <p class="card-text text-light opacity-75 mb-4">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+          <a href="#" class="btn btn-gold mt-auto rounded-pill px-4">Go somewhere</a>
         </div>
       </div>
     </div>
 
     <!-- Card 3 -->
     <div class="col-12 col-md-6 col-lg-4">
-      <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-        <img src="https://imgs.search.brave.com/Vd1Gt308-gkzuo0MALqwhucA85w5K_r46Exn3UJ7b2I/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L2ZyZWUtcGhvdG8v/Y3liZXJzZWN1cml0/eS1kYXRhLXByb3Rl/Y3Rpb24tY29uY2Vw/dF8yMy0yMTUxOTk4/NDkwLmpwZz9nYT1H/QTEuMS43ODMzNjc4/Ni4xNzg0OTI3ODI3/JnNlbXQ9YWlzX2h5/YnJpZCZ3PTc0MCZx/PTgw" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Cybersecurity">
+      <div class="card h-100 card-dark-gold rounded-4 overflow-hidden">
+        <img src="https://imgs.search.brave.com/Vd1Gt308-gkzuo0MALqwhucA85w5K_r46Exn3UJ7b2I/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L2ZyZWUtcGhvdG8v/Y3liZXJzZWN1cml0/eS1kYXRhLXByb3Rl/Y3Rpb24tY29uY2Vw/dF8yMy0yMTUxOTk4/NDkwLmpwZz9nYT1H/QTEuMS43ODMzNjc4/Ni4xNzg0OTI3ODI3/JnNlbXQ9YWlzX2h5/YnJpZCZ3PTc0MCZx/PTgw" class="card-img-top" style="height: 200px; object-fit: cover; filter: brightness(0.85);" alt="Cybersecurity">
         <div class="card-body d-flex flex-column text-center p-4">
-          <h5 class="card-title fw-bold mb-2">Cybersecurity</h5>
-          <p class="card-text text-secondary mb-4">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-          <a href="#" class="btn btn-primary mt-auto rounded-pill px-4">Go somewhere</a>
+          <h5 class="card-title fw-bold text-gold mb-2">Cybersecurity</h5>
+          <p class="card-text text-light opacity-75 mb-4">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+          <a href="#" class="btn btn-gold mt-auto rounded-pill px-4">Go somewhere</a>
         </div>
       </div>
     </div>
 
     <!-- Card 4 -->
     <div class="col-12 col-md-6 col-lg-4">
-      <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-        <img src="https://imgs.search.brave.com/Xc-HvWfy1SkH8g-sW67g-Fn_DK5MSaEuAyjoEUOtdSE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNDIv/MTE0LzcyMy9zbWFs/bC9kYXRhLWFuYWx5/c2lzLWluLWNvbnN1/bWVyLWVuZ2FnZW1l/bnQtcHJvZmVzc2lv/bmFscy11c2UtZGF0/YS1hbmFseXRpY3Mt/dG8tZ2Fpbi12ZWN0/b3IuanBn" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Data Analysis">
+      <div class="card h-100 card-dark-gold rounded-4 overflow-hidden">
+        <img src="https://imgs.search.brave.com/Xc-HvWfy1SkH8g-sW67g-Fn_DK5MSaEuAyjoEUOtdSE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNDIv/MTE0LzcyMy9zbWFs/bC9kYXRhLWFuYWx5/c2lzLWluLWNvbnN1/bWVyLWVuZ2FnZW1l/bnQtcHJvZmVzc2lv/bmFscy11c2UtZGF0/YS1hbmFseXRpY3Mt/dG8tZ2Fpbi12ZWN0/b3IuanBn" class="card-img-top" style="height: 200px; object-fit: cover; filter: brightness(0.85);" alt="Data Analysis">
         <div class="card-body d-flex flex-column text-center p-4">
-          <h5 class="card-title fw-bold mb-2">Data Analysis</h5>
-          <p class="card-text text-secondary mb-4">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-          <a href="#" class="btn btn-primary mt-auto rounded-pill px-4">Go somewhere</a>
+          <h5 class="card-title fw-bold text-gold mb-2">Data Analysis</h5>
+          <p class="card-text text-light opacity-75 mb-4">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+          <a href="#" class="btn btn-gold mt-auto rounded-pill px-4">Go somewhere</a>
         </div>
       </div>
     </div>
 
     <!-- Card 5 -->
     <div class="col-12 col-md-6 col-lg-4">
-      <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-        <img src="https://imgs.search.brave.com/5_GELbkbP88ZqexcNuXH3a6grveFCNlY4jb07eWQ5VE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMDEv/NTU4LzcxMC9zbWFs/bC91aS11eC1kZXNp/Z24tZmxhdC1sYW5k/aW5nLXBhZ2UtdmVj/dG9yLmpwZw" class="card-img-top" style="height: 200px; object-fit: cover;" alt="UI/UX Design">
+      <div class="card h-100 card-dark-gold rounded-4 overflow-hidden">
+        <img src="https://imgs.search.brave.com/5_GELbkbP88ZqexcNuXH3a6grveFCNlY4jb07eWQ5VE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMDEv/NTU4LzcxMC9zbWFs/bC91aS11eC1kZXNp/Z24tZmxhdC1sYW5k/aW5nLXBhZ2UtdmVj/dG9yLmpwZw" class="card-img-top" style="height: 200px; object-fit: cover; filter: brightness(0.85);" alt="UI/UX Design">
         <div class="card-body d-flex flex-column text-center p-4">
-          <h5 class="card-title fw-bold mb-2">UI/UX Design</h5>
-          <p class="card-text text-secondary mb-4">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-          <a href="#" class="btn btn-primary mt-auto rounded-pill px-4">Go somewhere</a>
+          <h5 class="card-title fw-bold text-gold mb-2">UI/UX Design</h5>
+          <p class="card-text text-light opacity-75 mb-4">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+          <a href="#" class="btn btn-gold mt-auto rounded-pill px-4">Go somewhere</a>
         </div>
       </div>
     </div>
 
     <!-- Card 6 -->
     <div class="col-12 col-md-6 col-lg-4">
-      <div class="card  border-0 shadow-sm rounded-4 overflow-hidden">
-        <img src="https://imgs.search.brave.com/DXQ_N3i3dVV1TVyVhqhw3yerWbyw6LVYhC6Ohw20MM0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS82/NWRmNDA2YmNmNzQ2/YTdmZmM5YmU0NzAv/NjY3ZWE2OTc4YzU3/NGFjYzg1NDBjNzMx/X0FEXzRuWGVLRDhv/NURsX28zSUJLZHFT/UnBIOU02ZHlGQ3FS/NW52dDVURWlyaXBB/bTR2ZVRsNnQ4Y0hJ/UXYtYjA1TG9RTnlI/NUFIR1BPUFVlNTZE/NlpyWXc0cW5FV0Zh/R3lHQk4tcTVXdHQ1/azNKMzVMekJXZElG/WjMtenNHRUVpdTRw/N21vWkItYjBtejRs/c2d6aFRKX2h4UWsy/Z0VNaVYuanBlZw" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Cloud Solutions">
+      <div class="card card-dark-gold rounded-4 overflow-hidden">
+        <img src="https://imgs.search.brave.com/DXQ_N3i3dVV1TVyVhqhw3yerWbyw6LVYhC6Ohw20MM0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS82/NWRmNDA2YmNmNzQ2/YTdmZmM5YmU0NzAv/NjY3ZWE2OTc4YzU3/NGFjYzg1NDBjNzMx/X0FEXzRuWGVLRDhv/NURsX28zSUJLZHFT/UnBIOU02ZHlGQ3FS/NW52dDVURWlyaXBB/bTR2ZVRsNnQ4Y0hJ/UXYtYjA1TG9RTnlI/NUFIR1BPUFVlNTZE/NlpyWXc0cW5FV0Zh/R3lHQk4tcTVXdHQ1/azNKMzVMekJXZElG/WjMtenNHRUVpdTRw/N21vWkItYjBtejRs/c2d6aFRKX2h4UWsy/Z0VNaVYuanBlZw" class="card-img-top" style="height: 200px; object-fit: cover; filter: brightness(0.85);" alt="Cloud Solutions">
         <div class="card-body d-flex flex-column text-center p-4">
-          <h5 class="card-title fw-bold mb-2">Cloud Solutions</h5>
-          <p class="card-text text-secondary mb-4">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-          <a href="#" class="btn btn-primary mt-auto rounded-pill px-4">Go somewhere</a>
+          <h5 class="card-title fw-bold text-gold mb-2">Cloud Solutions</h5>
+          <p class="card-text text-light opacity-75 mb-4">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+          <a href="#" class="btn btn-gold mt-auto rounded-pill px-4">Go somewhere</a>
         </div>
       </div>
     </div>
@@ -208,45 +262,42 @@
 </div>
 <br> <br><br>
 <section class="card border-0 text-white text-center overflow-hidden my-4">
-  
-  
+
   <img 
     src="https://imgs.search.brave.com/R1_6R5SCsL3CQjnZ1P8j-K_PAR7NHR5QTBiqtCxlWUk/rs:fit:500:0:1:0/g:ce/aHR0cDovL2tld21h/bmFnZW1lbnQuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIw/LzA3L3dvcmtwbGFj/ZS0xLmpwZw" 
     class="card-img" 
     alt="Background Image" 
-    style="min-height: 1000px; object-fit: cover;"
+    style="min-height: 1000px; object-fit: cover; filter: brightness(0.25);"
   >
 
-  
-  <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center bg-dark bg-opacity-75 p-4 p-md-5">
+  <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center bg-black bg-opacity-85 p-4 p-md-5">
     <div class="container" style="max-width: 800px;">
-      
-      
-      <h3 class="fw-bold display-6 mb-4 text-uppercase tracking-wide text-primary">Testimonies</h3>
 
-      <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4 mx-auto" style="max-width: 650px;">
-  <div class="row g-0 align-items-center bg-dark text-white">
-    
+      <h3 class="fw-bold display-6 mb-4 text-uppercase tracking-wide text-gold">Testimonies</h3>
+
+      <div class="card card-dark-gold shadow-sm rounded-4 overflow-hidden mb-4 mx-auto" style="max-width: 650px;">
+  <div class="row g-0 align-items-center text-white">
+
     <!-- Profile Image Column -->
-    <div class="col-md-4 p-4 text-center bg-secondary bg-opacity-25 border-end border-secondary border-opacity-25 d-flex flex-column align-items-center justify-content-center">
+    <div class="col-md-4 p-4 text-center bg-black bg-opacity-50 border-end border-warning border-opacity-25 d-flex flex-column align-items-center justify-content-center">
       <img 
         src="https://imgs.search.brave.com/qu2XFUnMfu4LsiVNN1QN5r5m4Y6smaa-uQzZyI-WEhQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAxLzY3LzA3Lzk1/LzM2MF9GXzE2NzA3/OTU0M19SazFsc05Z/R3hzZmJKSFhxTTR5/N3ZvbzNjbW0xRGNw/Vi5qcGc" 
         alt="Student Profile" 
         class="rounded-circle border border-3 border-warning shadow mb-2" 
         style="width: 90px; height: 90px; object-fit: cover;"
       >
-      <h6 class="fw-bold mb-0 text-warning">Tech Nova Student</h6>
+      <h6 class="fw-bold mb-0 text-gold">Tech Nova Student</h6>
       <small class="text-white-50">Verified Graduate</small>
     </div>
 
-    
+    <!-- Testimony Content Column -->
     <div class="col-md-8">
-      <div class="card-body p-4">
-        <h5 class="card-title fw-bold text-uppercase tracking-wide text-warning mb-3">
+      <div class="card-body p-4 text-start">
+        <h5 class="card-title fw-bold text-uppercase tracking-wide text-gold mb-3">
           <i class="bi bi-quote fs-3 me-1"></i>Testimony
         </h5>
-        
-        <p class="card-text text-light fst-italic small mb-3" style="line-height: 1.6;">
+
+        <p class="card-text text-light fst-italic small mb-3" style="line-height: 1.6; color: #ddd !important;">
           "Tech Nova completely transformed my life. Their hands-on tech training gave me practical, industry-ready skills that boosted my confidence and career prospects. Through expert mentorship and clear, step-by-step guidance, I unlocked new opportunities I never thought possible. Tech Nova isn't just an education platform—it's a launchpad for personal and professional growth."
         </p>
 
@@ -258,30 +309,30 @@
 
   </div>
 </div>
-        
-      <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4 mx-auto" style="max-width: 650px;">
-  <div class="row g-0 align-items-center bg-dark text-white">
-    
+
+      <div class="card card-dark-gold shadow-sm rounded-4 overflow-hidden mb-4 mx-auto" style="max-width: 650px;">
+  <div class="row g-0 align-items-center text-white">
+
     <!-- Profile Image Column -->
-    <div class="col-md-4 p-4 text-center bg-secondary bg-opacity-25 border-end border-secondary border-opacity-25 d-flex flex-column align-items-center justify-content-center">
+    <div class="col-md-4 p-4 text-center bg-black bg-opacity-50 border-end border-warning border-opacity-25 d-flex flex-column align-items-center justify-content-center">
       <img 
         src="https://imgs.search.brave.com/Ua5lIkEH4X4Ohv75skB2M5QselPom2v2Ktb9gzpFR90/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAzLzA5LzQ3LzEz/LzM2MF9GXzMwOTQ3/MTMxNl9jV0NmaEdX/UUVlMXRZNk9aODdM/ZVQ0Z09HNXFmdk5k/Ty5qcGc" 
         alt="Student 2 Profile" 
         class="rounded-circle border border-3 border-warning shadow mb-2" 
         style="width: 90px; height: 90px; object-fit: cover;"
       >
-      <h6 class="fw-bold mb-0 text-warning">Tech Nova Student</h6>
+      <h6 class="fw-bold mb-0 text-gold">Tech Nova Student</h6>
       <small class="text-white-50">Verified Graduate</small>
     </div>
 
     <!-- Testimony Content Column -->
     <div class="col-md-8">
-      <div class="card-body p-4">
-        <h5 class="card-title fw-bold text-uppercase tracking-wide text-warning mb-3">
+      <div class="card-body p-4 text-start">
+        <h5 class="card-title fw-bold text-uppercase tracking-wide text-gold mb-3">
           Testimony
         </h5>
-        
-        <p class="card-text text-light fst-italic small mb-3" style="line-height: 1.6;">
+
+        <p class="card-text text-light fst-italic small mb-3" style="line-height: 1.6; color: #ddd !important;">
           "Tech Nova completely transformed my life. Their hands-on tech training gave me practical, industry-ready skills that boosted my confidence and career prospects. Through expert mentorship and clear, step-by-step guidance, I unlocked new opportunities I never thought possible. Tech Nova isn't just an education platform—it's a launchpad for personal and professional growth."
         </p>
 
@@ -293,29 +344,29 @@
 
   </div>
 </div>
-       <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4 mx-auto" style="max-width: 650px;">
-  <div class="row g-0 align-items-center bg-dark text-white">
-    
+       <div class="card card-dark-gold shadow-sm rounded-4 overflow-hidden mb-4 mx-auto" style="max-width: 650px;">
+  <div class="row g-0 align-items-center text-white">
+
     <!-- Profile Image Column -->
-    <div class="col-md-4 p-4 text-center bg-secondary bg-opacity-25 border-end border-secondary border-opacity-25 d-flex flex-column align-items-center justify-content-center">
+    <div class="col-md-4 p-4 text-center bg-black bg-opacity-50 border-end border-warning border-opacity-25 d-flex flex-column align-items-center justify-content-center">
       <img 
         src="https://imgs.search.brave.com/sVPXGIaxANbBmCqCBtesGlgBSHDsNqt9bUOZwSzmLUs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzIxLzNj/L2JhLzIxM2NiYThm/MTYwZjg4NTlhNmFi/NTI1NDVlNDhiNzkz/LmpwZw" 
         alt="Student 3 Profile" 
         class="rounded-circle border border-3 border-warning shadow mb-2" 
         style="width: 90px; height: 90px; object-fit: cover;"
       >
-      <h6 class="fw-bold mb-0 text-warning">Tech Nova Student</h6>
+      <h6 class="fw-bold mb-0 text-gold">Tech Nova Student</h6>
       <small class="text-white-50">Verified Graduate</small>
     </div>
 
     <!-- Testimony Content Column -->
     <div class="col-md-8">
-      <div class="card-body p-4">
-        <h5 class="card-title fw-bold text-uppercase tracking-wide text-warning mb-3">
+      <div class="card-body p-4 text-start">
+        <h5 class="card-title fw-bold text-uppercase tracking-wide text-gold mb-3">
           Testimony
         </h5>
-        
-        <p class="card-text text-light fst-italic small mb-3" style="line-height: 1.6;">
+
+        <p class="card-text text-light fst-italic small mb-3" style="line-height: 1.6; color: #ddd !important;">
           "Tech Nova completely transformed my life. Their hands-on tech training gave me practical, industry-ready skills that boosted my confidence and career prospects. Through expert mentorship and clear, step-by-step guidance, I unlocked new opportunities I never thought possible. Tech Nova isn't just an education platform—it's a launchpad for personal and professional growth."
         </p>
 
@@ -331,103 +382,91 @@
       </div>
       </div>
 
-     
-      
-
-
-    
   </div>
 
 </section>
-<section class="bg-white text-center py-5 px-4 rounded-4 shadow-sm my-4 border">
+<section class="bg-black text-center py-5 px-4 rounded-4 my-4" style="border: 1px solid rgba(212, 175, 55, 0.3);">
   <div class="container py-3" style="max-width: 650px;">
-    
+
     <!-- Optional Badge accent -->
-    <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill fw-semibold text-uppercase tracking-wide mb-3">
+    <span class="badge bg-gold text-dark px-3 py-2 rounded-pill fw-semibold text-uppercase tracking-wide mb-3">
       Join Tech Nova
     </span>
-    
+
     <!-- Main Centered Heading -->
-    <h2 class="display-6 fw-bold text-dark mb-3">
+    <h2 class="display-6 fw-bold text-gold mb-3">
       Ready to start your tech journey?
     </h2>
-    
+
     <!-- Subtitle for visual polish -->
-    <p class="text-secondary mb-4 fs-6">
+    <p class="text-light opacity-75 mb-4 fs-6">
       Gain practical, industry-ready skills and transform your career with expert mentorship.
     </p>
-    
-    
-    <button type="button" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow fw-semibold text-capitalize transition-all">
+
+    <button type="button" class="btn btn-gold btn-lg px-5 py-3 rounded-pill shadow fw-semibold text-capitalize transition-all">
       Get Started Now <i class="bi bi-arrow-right ms-2"></i>
     </button>
 
   </div>
 </section>
  <section class="footer">
-<footer class="bg-dark text-white pt-5 pb-4 mt-5">
+<footer class="bg-black text-white pt-5 pb-4 mt-5" style="border-top: 1px solid rgba(212, 175, 55, 0.2);">
   <div class="container">
     <div class="row g-4 mb-5">
-      
-      
+
       <div class="col-lg-4 col-md-6">
-        <h5 class="fw-bold text-uppercase text-primary mb-3">
+        <h5 class="fw-bold text-uppercase text-gold mb-3">
           <i class="bi bi-rocket-takeoff-fill me-2"></i>Tech Nova
         </h5>
         <p class="text-white-50 small mb-4" style="line-height: 1.6;">
           Your ultimate launchpad for personal and professional growth. We empower aspiring tech professionals with practical, industry-ready skills and expert mentorship.
         </p>
-        
-        
+
       </div>
 
-      
       <div class="col-lg-2 col-md-6 ms-auto">
-        <h6 class="fw-bold text-uppercase text-primary mb-3">Programs</h6>
+        <h6 class="fw-bold text-uppercase text-gold mb-3">Programs</h6>
         <ul class="list-unstyled mb-0">
-          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-light">Web Development</a></li>
-          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-light">Data Science</a></li>
-          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-light">UI/UX Design</a></li>
-          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-light">Cloud Computing</a></li>
+          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-gold">Web Development</a></li>
+          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-gold">Data Science</a></li>
+          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-gold">UI/UX Design</a></li>
+          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-gold">Cloud Computing</a></li>
         </ul>
       </div>
 
-      
       <div class="col-lg-2 col-md-6">
-        <h6 class="fw-bold text-uppercase text-primary mb-3">Company</h6>
+        <h6 class="fw-bold text-uppercase text-gold mb-3">Company</h6>
         <ul class="list-unstyled mb-0">
-          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-light">About Us</a></li>
-          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-light">Testimonials</a></li>
-          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-light">Mentors</a></li>
-          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-light">Careers</a></li>
+          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-gold">About Us</a></li>
+          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-gold">Testimonials</a></li>
+          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-gold">Mentors</a></li>
+          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-gold">Careers</a></li>
         </ul>
       </div>
 
-      
       <div class="col-lg-3 col-md-6">
-        <h6 class="fw-bold text-uppercase text-primary mb-3">Stay Updated</h6>
+        <h6 class="fw-bold text-uppercase text-gold mb-3">Stay Updated</h6>
         <p class="text-white-50 small mb-3">Subscribe to our newsletter for the latest tech news and course updates.</p>
         <form>
           <div class="input-group mb-2">
-            <input type="email" class="form-control form-control-sm bg-secondary bg-opacity-25 border-secondary text-white" placeholder="Enter your email" aria-label="Email">
-            <button class="btn btn-primary btn-sm px-3" type="button"><i class="bi bi-send-fill"></i></button>
+            <input type="email" class="form-control form-control-sm bg-dark border-warning text-white" placeholder="Enter your email" aria-label="Email">
+            <button class="btn btn-gold btn-sm px-3" type="button"><i class="bi bi-send-fill"></i></button>
           </div>
         </form>
       </div>
 
     </div>
 
-    <hr class="border-secondary opacity-25 my-4">
+    <hr class="border-warning opacity-25 my-4">
 
-   
     <div class="row align-items-center small text-white-50">
       <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
         &copy; 2026 Tech Nova. All rights reserved.
       </div>
       <div class="col-md-6 text-center text-md-end">
-        <a href="#" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
-        <a href="#" class="text-white-50 text-decoration-none me-3">Terms of Service</a>
-        <a href="#" class="text-white-50 text-decoration-none">Cookie Settings</a>
+        <a href="#" class="text-white-50 text-decoration-none me-3 hover-gold">Privacy Policy</a>
+        <a href="#" class="text-white-50 text-decoration-none me-3 hover-gold">Terms of Service</a>
+        <a href="#" class="text-white-50 text-decoration-none hover-gold">Cookie Settings</a>
       </div>
     </div>
   </div>
